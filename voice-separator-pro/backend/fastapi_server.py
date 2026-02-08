@@ -10,7 +10,7 @@ from pydub import AudioSegment
 from noisereduce import reduce_noise
 import uvicorn
 
-app = FastAPI(title="Voice Separator Pro - CPU Edition")
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -127,3 +127,4 @@ async def root():
 if __name__ == "__main__":
     print("🚀 Starting CPU Voice Separator on PORT 8001...")
     uvicorn.run(app, host="0.0.0.0", port=8001)  # CHANGED TO 8001
+
